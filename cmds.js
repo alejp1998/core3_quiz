@@ -193,7 +193,6 @@ exports.playCmd = rl => {
           log('Correcta. Aciertos: ' + score);
           gameQuestions.splice(questionId, 1);
           if(gameQuestions.length < 1){
-            log('Correcta. Aciertos: ' + score);
             biglog('WINNER','magenta');
             rl.prompt();
           }else{

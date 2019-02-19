@@ -190,12 +190,11 @@ exports.playCmd = rl => {
       rl.question(colorize(gameQuestions[questionId].question + ': ', 'red'), answer => {
         if(answer == gameQuestions[questionId].answer){
           score++;
-          log('Correcta. Aciertos : ' + score + ' puntos.');
+          log('Correcta. Aciertos: ' + score);
           gameQuestions.splice(questionId, 1);
           if(gameQuestions.length < 1){
-            log('Correcta. Aciertos : ' + score + ' puntos.');
+            log('Correcta. Aciertos: ' + score);
             biglog('WINNER','magenta');
-            log('Puntuación final: '+ score + ' puntos.','green');
             rl.prompt();
           }else{
             newQuestion();
